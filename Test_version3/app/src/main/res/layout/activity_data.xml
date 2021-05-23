@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataActivity">
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="增加"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="70dp" />
+
+    <Button
+        android:id="@+id/button_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="显示"
+        app:layout_constraintTop_toBottomOf="@+id/button_add"
+        tools:layout_editor_absoluteX="70dp" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="61dp"
+        android:text="删除"
+        app:layout_constraintTop_toBottomOf="@+id/button_show"
+        tools:layout_editor_absoluteX="70dp" />
+
+    <Button
+        android:id="@+id/button_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:text="查找"
+        app:layout_constraintTop_toBottomOf="@+id/button_delete"
+        tools:layout_editor_absoluteX="65dp" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:text="清空"
+        app:layout_constraintTop_toBottomOf="@+id/button_find"
+        tools:layout_editor_absoluteX="67dp" />
+
+
+    <TextView
+        android:id="@+id/text_show"
+        android:layout_width="161dp"
+        android:layout_height="215dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
+
+        android:singleLine="false"
+        android:text="TextView"
+
+        app:layout_constraintStart_toEndOf="@+id/button_add"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/button_show"
+        app:layout_constraintTop_toBottomOf="@+id/text_show" />
+
+    <EditText
+        android:id="@+id/edit_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/button_delete"
+        app:layout_constraintTop_toBottomOf="@+id/edit_username" />
+
+    <TextView
+        android:id="@+id/text_mess"
+        android:layout_width="146dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="81dp"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@+id/button_clear"
+        tools:layout_editor_absoluteX="65dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

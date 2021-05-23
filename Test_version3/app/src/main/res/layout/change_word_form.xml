@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/studentForm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单词"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/word_spell_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请填写单词"
+            android:textSize="20dp"
+            android:background="@android:drawable/alert_light_frame"
+            android:selectAllOnFocus="true"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="解释"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/word_explanation_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:hint="请填写解释"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:background="@android:drawable/alert_light_frame"
+            android:minLines="5"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="级别"
+            android:textSize="20dp" />
+        <EditText
+            android:id="@+id/word_level_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请填写难度(0-6)"
+            android:textSize="20dp"
+            android:background="@android:drawable/alert_light_frame"
+            android:selectAllOnFocus="true" />
+    </TableRow>
+
+</TableLayout>

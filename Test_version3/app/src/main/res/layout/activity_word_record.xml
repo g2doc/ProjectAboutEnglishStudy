@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WordRecordActivity"
+    android:orientation="vertical">
+
+    <!-- 全部的大容器  竖排 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="单词记录界面"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        />
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/notebook"
+        android:layout_gravity="center"
+
+        />
+
+    <!--这个 LinearLayout 用来实现 单词和释意的输入 -->
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单词："
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            />
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="40dp"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="释意："
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            />
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="词性："
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            />
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:hint="adv/adj/n/"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="记录单词"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+
+
+
+
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="易错查询"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

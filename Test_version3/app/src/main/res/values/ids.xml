@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="bt_floating_" type="id" />
+
+    <item name="test_view_1" type="id"/>
+    <item name="test_view_2" type="id"/>
+    <item name="test_view_3" type="id"/>
+    <item name="test_view_4" type="id"/>
+    <item name="test_view_5" type="id"/>
+    <item name="test_view_6" type="id"/>
+    <item name="test_view_7" type="id"/>
+    <item name="test_view_8" type="id"/>
+    <item name="test_view_9" type="id"/>
+    <item name="test_view_10" type="id"/>
+    <item name="test_view_11" type="id"/>
+    <item name="test_view_12" type="id"/>
+    <item name="test_view_13" type="id"/>
+    <item name="test_view_14" type="id"/>
+    <item name="test_view_15" type="id"/>
+    <item name="test_view_16" type="id"/>
+    <item name="test_view_17" type="id"/>
+    <item name="test_view_18" type="id"/>
+    <item name="test_view_19" type="id"/>
+    <item name="test_view_20" type="id"/>
+    <item name="test_view_21" type="id"/>
+    <item name="test_view_22" type="id"/>
+    <item name="test_view_23" type="id"/>
+    <item name="test_view_24" type="id"/>
+    <item name="test_view_25" type="id"/>
+    <item name="test_view_26" type="id"/>
+    <item name="test_view_27" type="id"/>
+    <item name="test_view_28" type="id"/>
+
+</resources>

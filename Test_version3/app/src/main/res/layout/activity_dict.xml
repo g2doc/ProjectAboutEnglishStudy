@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".DictActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#39A4FF">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="backMain"
+            android:src="@drawable/back_form"/>
+
+        <EditText
+            android:id="@+id/search_key_new"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:paddingLeft="10dp"
+            android:inputType="text"
+            android:maxLines="1"
+            />
+
+        <ImageView
+            android:id="@+id/word_search_new"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/search"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+    <!--在 RecyclerView 数据保存下面 添加一个浮层 button， 用于 添加到记错本 -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/bt_floating"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#FFC107"
+        app:rippleColor="#e7d16b"
+
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_add_24ok"
+        app:fabCustomSize="40dp"
+
+
+
+
+
+        />
+
+    <!-- 放到 底部栏中心 android:layout_gravity="bottom|center" -->
+
+
+</LinearLayout>

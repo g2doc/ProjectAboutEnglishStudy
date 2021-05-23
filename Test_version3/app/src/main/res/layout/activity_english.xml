@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnglishActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="口语练习界面"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        />
+    <ImageView
+
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/voice"
+        android:layout_gravity="center"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:hint="发音查询"
+            android:inputType="textPersonName"
+            android:layout_gravity="center"
+            android:id="@+id/et_tofind"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_tofindvoice"
+            android:text="查询"
+            android:textSize="25dp"
+            />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/personshow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="发音测评"
+            android:textSize="18dp"
+
+            android:textStyle="bold"
+            android:id="@+id/bt_voice"
+
+            />
+
+        <Button
+
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="start"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:id="@+id/bt_TTS"
+            />
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="ok"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:id="@+id/bt_ok"
+            />
+        <Button
+            android:id="@+id/explain"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="释义"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/speaknext"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="next"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <!-- 实现 TextView 可以滚动 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/showall"
+        android:maxLines="1000"
+        android:scrollbars="vertical"
+        />
+
+
+
+
+    <!-- 口语测试 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
+        <!-- android:inputType="textPersonName" 可以输出中文1-->
+
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="语音结果"
+        android:textSize="14dp"
+        />
+
+
+
+
+
+
+
+
+
+</LinearLayout>

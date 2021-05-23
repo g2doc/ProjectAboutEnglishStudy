@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">   爱英语       </string>
+    <string name="signin">     登入          </string>
+    <string name="register">   注册        </string>
+    <string name="speaker">    语音识别      </string>
+
+
+    <string name="title_activity_fountion">FountionActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="topText">NiuStu</string>
+    <string name="title"> Ntu 学习 </string>
+
+
+</resources>

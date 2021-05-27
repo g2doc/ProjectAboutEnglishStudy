@@ -1,0 +1,17 @@
+1、加载进度条实现
+    https://p.codekk.com/detail/Android/cheng2016/AndroidUIAdapter
+
+2、语音识别功能：
+
+
+ui 模板库
+git clone https://github.com/xuexiangjys/TemplateAppProject.git
+使用
+ 修改项目名(文件夹名字)， 删除目录下的 .git
+ 修改包名
+ 修改 applicationld
+ 修改 app_name
+ 修改 启动页 样式
+ data@miPC:~/Graduation/UIDemo/demo$ rm -rf .git
+
+

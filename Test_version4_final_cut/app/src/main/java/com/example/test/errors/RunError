@@ -1,0 +1,276 @@
+1、I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+主线程 一直 do too much work 阻塞
+
+解决办法：可能是 主线程阻塞, 另开多线程处理
+
+
+2、android 开发中 textView 文本过长的显示问题
+解决办法：
+ 只用 textView, 用 textView 自带的 滚动条 完成全部显示
+
+
+3、android 界面 用 ImageView 显示图片
+解决办法：
+
+4、android 登录界面的优化
+解决办法：
+
+
+5、        //@ 监听内容改变 --> 控制按钮的点击状态
+          user.addTextChangedListener( (TextWatcher) this);
+    实现功能: 账号和密码都输出之后 登录按钮才可以点亮
+
+
+6、
+android:orientation="vertical"
+指定布局内 控件排列方式 为 垂直排列
+
+horizontal  水平排列
+
+
+7、 linearLayout 线性布局
+    一种非常常用的布局。这个布局会将它所包含的控件在线性方向上依次排列。
+    既然是线性排列，肯定就不仅只有一个方向，这里一般只有两个方向：水平方向和垂直方向。
+下面我们将LinearLayout（线性布局）常用到的属性简单归纳一下：
+
+属性1：android:orientation    指定线性布局的方向（水平或者垂直）
+
+属性2：android:width             线性布局的容器宽度
+
+属性3：android:height           线性布局的容器高度
+
+属性4：android:background  线性布局的背景
+
+属性5：android:gravity          线性布局中，子容器相对于父容器所在的位置
+1属性值：
+
+android:orientation="horizontal"           指定线性布局方向：水平
+
+android:orientation="vertical"               指定线性布局方向：垂直
+
+2.属性值：
+
+android:width="xxxdp"                          指定线性布局的容器宽度为：xxxdp
+
+android:width="wrap_content"             指定线性布局的容器宽度为：根据容器内容宽度大小来填充屏幕宽度
+
+android:width="match_parent"             指定线性布局的容器宽度为：撑满整个屏幕宽度
+
+3.属性值：
+
+android:height="xxxdp"                          指定线性布局的容器高度为：xxxdp
+
+android:height="wrap_content"             指定线性布局的容器高度为：根据容器内容高度大小来填充屏幕高度
+
+android:height="match_parent"             指定线性布局的容器高度为：撑满整个屏幕高度
+
+4.属性值：
+
+android:background="#000"                  指定线性布局的背景为：黑色（rgb颜色）
+
+android:background="@android:color/black"   指定线性布局的背景为：黑色（引用android系统自带的原始黑色）
+
+andrid:backgrund="@color/colorPrimary"   指定线性布局的背景为：（根据res/color.xml 中的colorPrimary所定义的颜色设置）
+
+5属性值：
+
+android:gravity="center"      指定线性布局中，子容器相对于父容器所在的位置为：正中心
+
+android:gravity="cente_verticalr"      指定线性布局中，子容器相对于父容器所在的位置为：垂直方向的正中心
+
+android:gravity="center_horizontal"      指定线性布局中，子容器相对于父容器所在的位置为：水平方向的正中心
+
+android:gravity="left"      指定线性布局中，子容器相对于父容器所在的位置为：最左边（默认）
+
+android:gravity="right"      指定线性布局中，子容器相对于父容器所在的位置为：最右边
+
+android:gravity="top"      指定线性布局中，子容器相对于父容器所在的位置为：最上方(默认)
+
+android:gravity="bottom"      指定线性布局中，子容器相对于父容器所在的位置为：最下方
+
+
+8、设置语音识别 监听方法时, error
+I/Process: Sending signal. PID: 30153 SIG: 9   进程被迫终止
+
+
+9、修改 AS 主题
+    setting  / appearance
+
+10、
+android 错误弹窗的 dialog 不满足使用要求
+解决办法：自定义 alertdialog 弹窗工具类
+
+
+
+11、Android 内的 SQliteBase 详解:
+    实现 Android 对本地数据库的访问
+    可以用 SQliteBase  类 来实现
+    但是使用这个类---> 需要自己创建数据库, 不便于 管理
+        所以 Android 封装了  SQliteOpenHelper 类
+        继承这个类
+            需要 复写 它的 onCreate()  and  onUpodate()
+        1、if 数据库不存在:
+                调用 onCreate()  不会调用 onUpdate()
+        2、if 数据库存在:
+                但是版本不一样
+                    调用 onUpdate()
+        3、if 数据库存在:
+                但是版本一样
+                    不调用
+        4、数据库的表的创建一般都在SQLiteOpenHelper的onCreat()中，
+           表字段升级，都会在onUpgrade()处理；
+
+    if 其他文件要用到  dbhelper
+
+
+
+
+
+12、用拖拽的方法构造的ui布局在不同的手机上效果不同,产生丢失
+解决办法：学习 xml 和 js 的相关写法 自定义 layout 布局文件
+   以 适配不同的手机尺寸
+
+
+13、
+ loadLibrary msc error:java.lang.UnsatisfiedLinkError: dlopen failed: library "libmsc.so" not found
+ 引入 迅飞库时候的 错误
+
+ https://blog.csdn.net/jiexiao4151/article/details/105483467
+
+https://stackoverflow.com/questions/55389241/cant-load-library-dlopen-failed-library-libboost-so-not-found
+
+
+3333
+https://blog.csdn.net/leansmall/article/details/78516060
+
+
+14、https://zhidao.baidu.com/question/334145451588451005.html
+开始  录音权限
+
+15、 语音识别
+https://www.jianshu.com/p/4757b01e46be
+
+16、语音合成
+https://www.cnblogs.com/numen-fan/p/10009365.html
+
+17、打包 apk https://zhidao.baidu.com/question/1303001324993238979.html
+
+
+
+18、单词查询功能
+    本地 db 查询
+    if not find ， then  联网查找
+https://www.cnblogs.com/carlos-vic/p/YueCi_3.html
+https://www.cnblogs.com/lcchuguo/p/5119650.html
+https://www.cnblogs.com/LIANQQ/p/3470006.html
+
+简易 版本
+https://blog.csdn.net/weixin_42247720/article/details/97383043
+
+19、好的开源项目
+https://p.codekk.com/
+
+算法 项目
+https://p.codekk.com/detail/Android/chefyuan/algorithm-base
+https://p.codekk.com/detail/Android/doocs/leetcode
+
+20、金山 词霸
+https://blog.csdn.net/Lone1yCode/article/details/79540647
+
+21、后续调试错误
+The currently selected variant "debug" uses split APKs, but none of the 1 split apks are compatible with the current device with ABIs "x86_64, arm64-v8a".
+解决办法：
+在 app 的 gradle 文件中 ndk 加入 'x86'
+
+        ndk {
+            // 设置支持的SO库架构,    what  is  ndk???
+            //abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86_64'   , 'x86'
+            abiFilters "armeabi", "x86", "armeabi-v7a",  'arm64-v8a', 'x86_64'
+        }
+
+
+22、美化 ui , 引入 XUI
+xui 是庞大的 可定制的统一的 ui 整体解决方案
+当前 version 1:  不必引入,  先用小的 组件库
+
+
+23、 原型设计出现问题,  要深入学习
+
+
+
+
+24、resource xml/StringValues (aka com.example.test:xml/StringValues) not found.
+原因是 debug 时候没有找到默认的 values 资源
+https://my.oschina.net/u/4347242/blog/4549559   解决
+
+
+25
+app 安装之后, 给了录音权限未生效，还需要手动设置里开启
+解决办法：
+
+
+
+26、单词查询
+solution: 百度API
+https://api.fanyi.baidu.com/
+产品服务/ 通用翻译 API
+然后点击控制台/ 开发者信息 查看申请的
+APPID 和 密钥
+
+
+27、下载相关依赖出错
+Unknown host 'maven.oschina.net'
+
+
+28、Unable to start activity ComponentInfo{com.example.test/com.example.test.StartDictActivity}:
+org.litepal.exceptions.GlobalException:
+Application context is null.
+Maybe you haven't configured your application name with "org.litepal.LitePalApplication" in your AndroidManifest.xml.
+Or you can call LitePalApplication.initialize(Context) method instead.
+
+
+29、java.lang.NullPointerException: Attempt to invoke virtual method 'com.alibaba.fastjson.JSONArray com.alibaba.fastjson.JSONObject.getJSONArray(java.lang.String)' on a null object reference
+
+
+30 卸载掉 app 之后重新安装,如果没有先注册,就点击登陆会 导致系统崩溃 报错
+A resource failed to call close.
+[Bug]:
+实例状态丢失---
+
+31 Cleartext HTTP traffic to fanyi-api.baidu.com not permitted
+安卓高版本 联网失败报错--
+[Bug]
+Google针对下一代 Android 系统(Android P) 的应用程序，将要求默认使用加密连接，这意味着 Android P 将禁止 App 使用所有未加密的连接
+solution:
+1-1 app 改用 https 请求
+1-2 targetSdkVersion 降到 27 以下
+1-3 更改网络安全配置
+ex 1-3
+在 res/ 下新建 一个 xml 文件夹, 创建一个 network_security_config.xml
+内容
+
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true" />
+</network-security-config>
+然后在 AndroidManifest.xml 文件下的 application 标签增加属性
+
+<application
+...
+ android:networkSecurityConfig="@xml/network_security_config"
+...
+    />
+
+方法 1-4
+在AndroidManifest.xml配置文件的<application>标签中直接插入
+android:usesCleartextTraffic="true"
+
+实测  方法3 最好用 ---->
+
+
+
+
+
+
+
+

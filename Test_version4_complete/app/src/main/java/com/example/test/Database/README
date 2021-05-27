@@ -1,0 +1,18 @@
+1、Android 里 封装了对 数据库的操作
+  在 类   SQLiteOpenHelper   中
+  要做的就是继承它，并依照你的需求去敲敲打打
+
+  也可以参考 源码,  学习一下  SQLiteOpenHelper    的实现！
+
+
+2、Android中有内置的数据库SQLite，其默认存储位置是在:标题栏中Window->show view->File Exporer->data/data/应用项目的包名,例如：
+假如有一个操作Android SQLite数据库的应用包名为com.example.xutilsdemo,那么其内置的数据库的存储位置即为:/data/data/com.example.xutilsdemo/databases/xxx.db
+
+
+3、 ubuntu 上 https://blog.csdn.net/jianming21/article/details/89578144
+    虚拟机上安装  SQliteStudio
+
+
+4、  创建 数据库  出现 闪退问题
+原因是  继承 MyDBHelper extends SQLiteOpenHelper  时
+没有 重写完成 onUpgrade 方法 导致闪退，，   切记

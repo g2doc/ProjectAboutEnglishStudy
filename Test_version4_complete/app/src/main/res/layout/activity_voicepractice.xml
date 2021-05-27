@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoicePracticeActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+<!--
+            <TextView
+                android:id="@+id/voice_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="@string/voice_text_title"
+                android:textStyle="bold"
+                android:textSize="30sp" /> -->
+            <!-- 先确保英语是默认勾选-->
+            <RadioGroup
+                android:id="@+id/voice_radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/voice_radioBt_English"
+                    android:checked="true"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="@string/voice_radioText_English"/>
+                <RadioButton
+                    android:id="@+id/voice_radioBt_Chinese"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="@string/voice_radioText_Chinese"/>
+                <RadioButton
+                    android:id="@+id/voice_radioBt_French"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="@string/voice_radioText_French"/>
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/voice"
+            android:layout_gravity="center"
+            />
+
+        <!--这个LinearLayout 用来存放调节语速 和 音调的 button, 并尝试最优设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="right">
+            <Button
+                android:id="@+id/voice_bt_reducePitch"
+                android:text="@string/voice_btText_reducePitch"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+            <Button
+                android:id="@+id/voice_bt_increasePitch"
+                android:text="@string/voice_btText_increasePitch"
+                style="@style/my_font"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+            <Button
+                android:id="@+id/voice_bt_reduceSpeed"
+                android:text="@string/voice_btText_reduceSpeed"
+                style="@style/my_font"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/voice_bt_findVoice"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            style="@style/my_font"
+            android:text="@string/voice_bt_findVoice"/>
+
+        <EditText
+            android:id="@+id/voice_edit_findVoice"
+            android:inputType="textPersonName"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:hint="@string/voice_edit_hintText"
+            android:layout_gravity="center" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right">
+            <Button
+                android:id="@+id/voice_bt_increaseSpeed"
+                android:text="@string/voice_btText_increaseSpeed"
+                android:layout_gravity="center"
+                style="@style/my_font"
+                android:layout_width="100dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/voice_text_personSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- 实现 TextView 可以滚动 -->
+        <TextView
+            android:id="@+id/voice_text_showAll"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:maxLines="1000"
+            android:scrollbars="vertical"
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <Button
+                android:id="@+id/voice_bt_voiceJudge"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="@string/voice_bt_voiceJudge"
+                style="@style/my_font"/>
+            <Button
+                android:id="@+id/voice_bt_voiceStart"
+                android:text="@string/voice_bt_voiceStart"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                style="@style/my_font"/>
+            <Button
+                android:id="@+id/voice_bt_voiceNext"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="@string/voice_bt_voiceNext"
+                style="@style/my_font"/>
+            <Button
+                android:id="@+id/voice_bt_textLanguage"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="@string/voice_btText_textLanguage"
+                style="@style/my_font"
+                />
+            <Button
+                android:id="@+id/voice_bt_chooseTodd"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="@string/voice_btText_chooseTodd"
+                android:textAllCaps="false"
+                style="@style/my_font"
+                />
+            <Button
+                android:id="@+id/voice_bt_chooseDevon"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:textAllCaps="false"
+                android:text="@string/voice_btText_chooseDevon"
+                style="@style/my_font"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <!-- 口语测试 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
+        <!-- android:inputType="textPersonName" 可以输出中文1-->
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--新建 1 个 RelativeLayout 相对布局 -->
+    <!-- 高度是内容自适应-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        >
+        <!-- 头部返回图标  相对父组件 左上 -->
+        <!-- 注意这个属性 android:layout_marginLeft="23.799988dip" -->
+        <ImageView
+            android:id="@+id/text_login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:src="@drawable/icon_back" />
+
+
+    </RelativeLayout>>
+
+</LinearLayout>

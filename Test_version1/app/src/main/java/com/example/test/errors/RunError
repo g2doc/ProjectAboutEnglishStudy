@@ -1,0 +1,147 @@
+1、I/Choreographer: Skipped 1 frames!  The application may be doing too much work on its main thread.
+主线程 一直 do too much work 阻塞
+solution:
+
+
+
+
+2、android 开发中 textView 文本过长的显示问题
+solution:
+ 只用 textView, 用 textView 自带的 滚动条 完成全部显示
+
+
+3、android 界面 用 ImageView 显示图片
+solution:
+
+4、android 登录界面的优化
+
+
+
+5、        //@ 监听内容改变 --> 控制按钮的点击状态
+          user.addTextChangedListener( (TextWatcher) this);
+    实现功能: 账号和密码都输出之后 登录按钮才可以点亮
+
+
+6、
+android:orientation="vertical"
+指定布局内 控件排列方式 为 垂直排列
+
+horizontal  水平排列
+7、 linearLayout 线性布局
+    一种非常常用的布局。这个布局会将它所包含的控件在线性方向上依次排列。
+    既然是线性排列，肯定就不仅只有一个方向，这里一般只有两个方向：水平方向和垂直方向。
+下面我们将LinearLayout（线性布局）常用到的属性简单归纳一下：
+
+属性1：android:orientation    指定线性布局的方向（水平或者垂直）
+
+属性2：android:width             线性布局的容器宽度
+
+属性3：android:height           线性布局的容器高度
+
+属性4：android:background  线性布局的背景
+
+属性5：android:gravity          线性布局中，子容器相对于父容器所在的位置
+1属性值：
+
+android:orientation="horizontal"           指定线性布局方向：水平
+
+android:orientation="vertical"               指定线性布局方向：垂直
+
+2.属性值：
+
+android:width="xxxdp"                          指定线性布局的容器宽度为：xxxdp
+
+android:width="wrap_content"             指定线性布局的容器宽度为：根据容器内容宽度大小来填充屏幕宽度
+
+android:width="match_parent"             指定线性布局的容器宽度为：撑满整个屏幕宽度
+
+3.属性值：
+
+android:height="xxxdp"                          指定线性布局的容器高度为：xxxdp
+
+android:height="wrap_content"             指定线性布局的容器高度为：根据容器内容高度大小来填充屏幕高度
+
+android:height="match_parent"             指定线性布局的容器高度为：撑满整个屏幕高度
+
+4.属性值：
+
+android:background="#000"                  指定线性布局的背景为：黑色（rgb颜色）
+
+android:background="@android:color/black"   指定线性布局的背景为：黑色（引用android系统自带的原始黑色）
+
+andrid:backgrund="@color/colorPrimary"   指定线性布局的背景为：（根据res/color.xml 中的colorPrimary所定义的颜色设置）
+
+5属性值：
+
+android:gravity="center"      指定线性布局中，子容器相对于父容器所在的位置为：正中心
+
+android:gravity="cente_verticalr"      指定线性布局中，子容器相对于父容器所在的位置为：垂直方向的正中心
+
+android:gravity="center_horizontal"      指定线性布局中，子容器相对于父容器所在的位置为：水平方向的正中心
+
+android:gravity="left"      指定线性布局中，子容器相对于父容器所在的位置为：最左边（默认）
+
+android:gravity="right"      指定线性布局中，子容器相对于父容器所在的位置为：最右边
+
+android:gravity="top"      指定线性布局中，子容器相对于父容器所在的位置为：最上方(默认)
+
+android:gravity="bottom"      指定线性布局中，子容器相对于父容器所在的位置为：最下方
+
+
+8、设置语音识别 监听方法时, error
+I/Process: Sending signal. PID: 30153 SIG: 9   进程被迫终止
+
+
+9、修改 AS 主题
+    setting  / appearance
+
+10、 Android 里的 dialog 的使用
+    错误时的弹出窗口
+
+11、Android 内的 SQliteBase 详解:
+    实现 Android 对本地数据库的访问
+    可以用 SQliteBase  类 来实现
+    但是使用这个类---> 需要自己创建数据库, 不便于 管理
+        所以 Android 封装了  SQliteOpenHelper 类
+        继承这个类
+            需要 复写 它的 onCreate()  and  onUpodate()
+        1、if 数据库不存在:
+                调用 onCreate()  不会调用 onUpdate()
+        2、if 数据库存在:
+                但是版本不一样
+                    调用 onUpdate()
+        3、if 数据库存在:
+                但是版本一样
+                    不调用
+        4、数据库的表的创建一般都在SQLiteOpenHelper的onCreat()中，
+           表字段升级，都会在onUpgrade()处理；
+
+    if 其他文件要用到  dbhelper
+
+
+
+
+
+12、适配 屏幕的 解决方案，，，，--- 一定要是适配
+
+13、
+ loadLibrary msc error:java.lang.UnsatisfiedLinkError: dlopen failed: library "libmsc.so" not found
+ 引入 迅飞库时候的 错误
+
+ https://blog.csdn.net/jiexiao4151/article/details/105483467
+
+https://stackoverflow.com/questions/55389241/cant-load-library-dlopen-failed-library-libboost-so-not-found
+
+
+3333
+https://blog.csdn.net/leansmall/article/details/78516060
+
+
+14、https://zhidao.baidu.com/question/334145451588451005.html
+开始  录音权限
+
+15、 语音识别
+https://www.jianshu.com/p/4757b01e46be
+
+16、语音合成
+https://www.cnblogs.com/numen-fan/p/10009365.html

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppActivity"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="功能界面"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        />
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/dog"
+        android:layout_gravity="center"
+
+        />
+
+
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="口语练习"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/bt_toVoice"
+
+            />
+        <Button
+            android:id="@+id/to_wordTest"
+            android:layout_marginLeft="20dp"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:textStyle="bold"
+            android:text="单词测试"
+            android:textSize="18dp"
+            />
+    </LinearLayout>
+
+    <!-- 查询方面 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="听力练习"
+            android:textSize="18dp"
+            android:id="@+id/bt_toListen"
+            android:textStyle="bold"
+
+            />
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="单词查询"
+            android:id="@+id/bt_toWordFind"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <!-- 查询方面 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/to_trans"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="英汉互译"
+            android:textStyle="bold"
+            android:textSize="18dp"
+
+            />
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:text="易错单词"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/bt_TowordNote"
+            />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">   爱英语       </string>
+    <string name="signin">     登入          </string>
+    <string name="register">   注册        </string>
+    <string name="speaker">    语音识别      </string>
+
+
+    <string name="title_activity_fountion">FountionActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="topText">NiuStu</string>
+    <string name="title"> Ntu 学习 </string>
+
+
+    <!-- VoicePracticeActivity -->
+    <string name="voice_text_title">口语练习</string>
+    <string name="voice_bt_findVoice">查询</string>
+    <string name="voice_edit_hintText">发音查询</string>
+    <string name="voice_bt_voiceJudge">发音测评</string>
+    <string name="voice_bt_voiceStart">开始对话</string>
+    <string name="voice_bt_voiceNext">下一句</string>
+    <string name="voice_btText_textLanguage">En/Zh</string>
+    <string name="voice_radioText_English">英语</string>
+    <string name="voice_radioText_Chinese">汉语</string>
+    <string name="voice_radioText_French">法语</string>
+
+    <string name="voice_btText_reducePitch">降低音调</string>
+    <string name="voice_btText_increasePitch">升高音调</string>
+    <string name="voice_btText_reduceSpeed">放慢语速</string>
+    <string name="voice_btText_increaseSpeed">加快语速</string>
+    <string name="voice_btText_chooseTodd">Todd</string>
+    <string name="voice_btText_chooseDevon">Devon</string>
+
+
+
+
+</resources>

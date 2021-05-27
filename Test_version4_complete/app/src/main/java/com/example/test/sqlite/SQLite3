@@ -1,0 +1,161 @@
+package com.example.test.sqlite;
+import com.example.test.sqlite.DBHelper;
+import com.example.test.sqlite.User;
+
+// sqlite3 的相关方法
+/*
+    @ java 的 链表和 数组 操作需要再重新 复习 一下
+
+ */
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+
+/*
+@author zhanghao
+ */
+
+public class SQLite3 {
+    // 数据库 版本管理
+    private DBHelper dbHelper;
+
+    /*
+    在 new DBHelper 中 创建 数据库,  test.db
+     */
+    public SQLite3(Context context ){
+        this.dbHelper = new DBHelper(context);
+    }
+
+
+/*
+    public void createDB(Context context ){
+        DBHelper dbHelper = new DBHelper(context,"Usr",null,1);
+        // 得到一个 可读的 SQLiteDatabase 对象
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+
+
+        //调用 openOrCreateDatabase 方法创建一个 数据库
+
+        SQLiteDatabase dbtest = SQLiteDatabase.openOrCreateDatabase(
+                "/data/data/com.example.helloworld/databases/test.db",
+                null);
+    }
+*/
+
+    /*
+        @插入数据方法
+     */
+    public void insert( com.example.test.sqlite.User user){
+        // 打开连接,  写入数据
+        SQLiteDatabase db = dbHelper.getWritableDatabase();  //取得数据库 操作
+        String sql = "insert into t_users (username, pass) values(?,?)";
+        db.execSQL( sql, new Object[]{user.getUsername(), user.getPass() }  );
+        System.out.println("Insert Ok!\r\n");
+
+        /*
+        ContentValues values = new ContentValues();
+        values.put(User.KEY_NAME, user.user_name );
+        // contentvalues 用来存储 键值对 类型
+        long user_id = db.insert(User.TABLE, null,values );
+*/
+
+        db.close();
+    }
+
+    /*
+        @删除 记录
+     */
+    public void delete( Integer id ){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db.execSQL(" delete from t_users where id = ?", new Object[]{ id.toString() } );
+        db.close();
+    }
+
+    /*
+        @ 更新 数据, 修改数据
+     */
+    public void update( com.example.test.sqlite.User user){
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String sql = " update t_users set username=? ,pass=? where id = ?";
+        db.execSQL(sql, new Object[]{ user.getUsername(), user.getPass() } );
+
+        db.close();
+
+    }
+
+    /*
+        @根据 id 查找记录
+     */
+    public com.example.test.sqlite.User  find(Integer id){
+        User user = new User();
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        // 用 游标 cursor 接收 从数据库 检索到的数据
+        Cursor cursor = db.rawQuery("select * from t_users where id=?",new String[]{id.toString()});
+        if ( cursor.moveToFirst() ){ //依次取出数据
+            user.setId(       cursor.getInt(    cursor.getColumnIndex("id")));
+            user.setUsername( cursor.getString( cursor.getColumnIndex("username")));
+            user.setPass(     cursor.getString( cursor.getColumnIndex( "pass")));
+        }
+        db.close();
+        return user;
+    }
+
+    /*
+        @ 查询 所有记录
+     */
+    public List<User> findAll(){
+        List<User> list = new ArrayList<User>( );
+        User user = null;
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        // Cursor cursor=db.rawQuery("select * from t_users limit ?,?", new
+        // String[]{offset.toString(),maxLength.toString()});
+        // //这里支持类型MYSQL的limit分页操作
+
+        Cursor cursor  =db.rawQuery("select * from t_users", null );
+        while( cursor.moveToNext() ){
+            user = new User();
+            user.setId( cursor.getInt( cursor.getColumnIndex("id")));
+            user.setUsername( cursor.getString( cursor.getColumnIndex(" username")));
+            user.setPass( cursor.getString(cursor.getColumnIndex("pass")));
+            list.add(user);
+        }
+        db.close();
+        return list;
+    }
+
+
+    /*
+        @ 统计 所有记录数
+     */
+    public long getCount(){
+        SQLiteDatabase db= dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select count(*)  from t_users", null );
+        db.close();
+        return cursor.getLong(0 );
+    }
+
+    // 查找
+    public User getUserById(int id){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        String selectQuery = "select " + User.KEY_ID + ","+ User.KEY_NAME + " from "
+                + User.TABLE + " where " + User.KEY_ID + "=? " ;
+        int iCount = 0;
+        User user = new User();
+        return user;
+    }
+}
+
+

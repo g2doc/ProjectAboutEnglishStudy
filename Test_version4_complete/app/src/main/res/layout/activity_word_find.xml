@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StartDictActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="单词查询界面"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:background="#6B5C6160"
+            />
+        <ImageView
+            android:layout_marginTop="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/head"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="input:"
+        android:id="@+id/edit_tofind"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_recycler"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+
+
+
+        <!-- android:background="#39A4FF" -->
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            android:gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_youtube_search"
+                    />
+                <Button
+                    android:id="@+id/bt_toWordFind"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="单词查询"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                >
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_local_offer_local"
+                    />
+                <Button
+                    android:id="@+id/bt_toLocalWord"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="本地词库"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_bookmarks_db"
+                app:fabCustomSize="50dp"
+                android:clickable="true"
+                android:id="@+id/btf_towordnotes"
+
+
+                />
+            <!--app:fabCustomSize="50dp" 把 src 放到中间 -->
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
